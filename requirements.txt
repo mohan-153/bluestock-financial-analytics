@@ -1,5 +1,10 @@
-pandas
-openpyxl
+﻿pandas
 numpy
+openpyxl
 python-dotenv
 pytest
+fastapi
+uvicorn
+streamlit
+plotly
+httpx
