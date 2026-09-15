@@ -1,0 +1,1 @@
+Replace src/screener/engine.py, src/screener/__init__.py, src/dashboard/utils/db.py and src/dashboard/pages/03_screener.py. This version builds the screener from financial_ratios + profitandloss + market analytics instead of the incomplete Day 15 snapshot.

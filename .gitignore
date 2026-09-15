@@ -1,0 +1,23 @@
+@'
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+.streamlit/secrets.toml
+
+.env
+.env.*
+
+*.db
+*.sqlite
+*.sqlite3
+
+output/
+dist/
+build/
+*.log
+
+.DS_Store
+Thumbs.db
+'@ | Set-Content -Encoding UTF8 .gitignore
