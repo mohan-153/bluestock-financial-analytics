@@ -145,7 +145,7 @@ fig = px.scatter(
 )
 
 fig.update_layout(height=560)
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 st.subheader("Sector Median KPI")
 
@@ -166,7 +166,7 @@ bar = px.bar(
 )
 bar.update_traces(texttemplate="%{text:.2f}", textposition="outside")
 bar.update_layout(height=400)
-st.plotly_chart(bar, use_container_width=True)
+st.plotly_chart(bar, width="stretch")
 
 st.subheader("Companies in Sector")
 
@@ -183,6 +183,7 @@ display = plot_df[
 
 st.dataframe(
     display.round(2),
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
+

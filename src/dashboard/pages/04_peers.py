@@ -65,7 +65,8 @@ if metrics:
                                   theta=metrics + [metrics[0]],
                                   mode="lines", name="Peer Average"))
     fig.update_layout(polar=dict(radialaxis=dict(visible=True)), height=550)
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 st.subheader("Peer Companies")
-st.dataframe(df, use_container_width=True, hide_index=True)
+st.dataframe(df, width="stretch", hide_index=True)
+

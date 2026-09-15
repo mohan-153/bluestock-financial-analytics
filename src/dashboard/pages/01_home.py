@@ -52,7 +52,7 @@ st.subheader(f"Sector Breakdown — {selected_year}")
 sector = companies.groupby("broad_sector", dropna=False)["company_id"].nunique().reset_index(name="company_count")
 fig = px.pie(sector, names="broad_sector", values="company_count", hole=.45)
 fig.update_layout(height=420, margin=dict(l=10,r=10,t=40,b=10))
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 st.subheader("Top 5 Companies by Quality")
 if snapshot.empty:
@@ -63,6 +63,7 @@ else:
     if score in s:
         s[score] = pd.to_numeric(s[score], errors="coerce")
         cols = [x for x in ["company_id","company_name","broad_sector",score] if x in s]
-        st.dataframe(s.sort_values(score, ascending=False)[cols].head(5), use_container_width=True, hide_index=True)
+        st.dataframe(s.sort_values(score, ascending=False)[cols].head(5), width="stretch", hide_index=True)
         if score == "kpi_pass_count":
             st.caption("Composite quality score is not present in the current Day 15 snapshot; KPI pass count is used as the available quality ranking.")
+

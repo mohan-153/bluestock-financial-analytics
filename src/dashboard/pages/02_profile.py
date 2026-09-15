@@ -47,7 +47,7 @@ if {"year","sales","net_profit"}.issubset(pl.columns):
     fig.add_bar(x=x.year_label, y=x.sales, name="Revenue")
     fig.add_bar(x=x.year_label, y=x.net_profit, name="Net Profit")
     fig.update_layout(barmode="group", height=430, yaxis_title="₹ Crore")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 if not ratios.empty and "year" in ratios:
     st.subheader("ROE and ROCE Trend")
@@ -56,7 +56,7 @@ if not ratios.empty and "year" in ratios:
         if field in ratios:
             fig.add_scatter(x=ratios.year.astype(str), y=pd.to_numeric(ratios[field],errors="coerce"), mode="lines+markers", name=label)
     fig.update_layout(height=400, yaxis_title="%")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
 st.subheader("Pros and Cons")
 if pc.empty:
@@ -65,3 +65,4 @@ else:
     for _, row in pc.iterrows():
         if str(row.get("pros") or "").strip(): st.success("✓ " + str(row["pros"]).strip())
         if str(row.get("cons") or "").strip(): st.error("✗ " + str(row["cons"]).strip())
+

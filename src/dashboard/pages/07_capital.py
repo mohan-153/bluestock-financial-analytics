@@ -83,7 +83,7 @@ fig = px.treemap(
 )
 
 fig.update_layout(height=600)
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 patterns = summary["pattern"].tolist()
 
@@ -114,7 +114,7 @@ st.dataframe(
     companies_view[display_cols]
     .sort_values("company_id")
     .round(2),
-    use_container_width=True,
+    width="stretch",
     hide_index=True
 )
 
@@ -129,3 +129,4 @@ st.caption(
     "Classification is based on the latest available CFO/CFI/CFF sign pattern. "
     "Zero or missing values are treated as neutral."
 )
+

@@ -316,7 +316,7 @@ for column in display_df.columns:
 
 st.dataframe(
     display_df,
-    use_container_width=True,
+    width="stretch",
     hide_index=True,
 )
 
@@ -347,3 +347,4 @@ st.caption(
     "Inactive conditions are not applied. CAGR values are "
     "derived from the available fiscal-year history."
 )
+

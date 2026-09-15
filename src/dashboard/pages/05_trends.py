@@ -120,7 +120,7 @@ fig.update_layout(
     legend_title="Metrics",
 )
 
-st.plotly_chart(fig, use_container_width=True)
+st.plotly_chart(fig, width="stretch")
 
 st.subheader("Year-over-Year Change")
 
@@ -136,7 +136,7 @@ for label in selected:
 table = table.drop(columns="_year")
 st.dataframe(
     table.round(2),
-    use_container_width=True,
+    width="stretch",
     hide_index=True
 )
 
@@ -146,3 +146,4 @@ st.download_button(
     f"{ticker}_trend_analysis.csv",
     "text/csv"
 )
+
