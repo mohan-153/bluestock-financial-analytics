@@ -297,27 +297,53 @@ make api
 
 ## Dashboard Preview
 
-Add screenshots to `docs/screenshots/` and reference them here:
+### Home Dashboard
 
-```text
-docs/
-└── screenshots/
-    ├── home.png
-    ├── company-profile.png
-    ├── screener.png
-    ├── peer-comparison.png
-    ├── trends.png
-    ├── sectors.png
-    ├── capital.png
-    └── reports.png
-```
+Provides a high-level overview of the NIFTY 100 dataset, including company count, ROE, debt-to-equity, sector distribution, and top-quality companies.
 
-Example:
-
-```markdown
 ![Home Dashboard](docs/screenshots/home.png)
-```
 
+### Company Profile
+
+Displays company-level financial metrics, historical revenue and net profit, profitability indicators, and other company information.
+
+![Company Profile](docs/screenshots/company-profile.png)
+
+### Company Screener
+
+Allows users to filter companies using profitability, leverage, cash-flow, growth, and other financial metrics.
+
+![Company Screener](docs/screenshots/screener.png)
+
+### Peer Comparison
+
+Compares companies within integrated peer groups using financial KPIs and interactive visualizations.
+
+![Peer Comparison](docs/screenshots/peer-comparison.png)
+
+### Trend Analysis
+
+Shows historical financial trends and year-over-year changes for selected companies and metrics.
+
+![Trend Analysis](docs/screenshots/trends.png)
+
+### Sector Analysis
+
+Provides sector-level comparison using revenue, ROE, market capitalization, and subsector information.
+
+![Sector Analysis](docs/screenshots/sectors.png)
+
+### Capital Allocation
+
+Visualizes CFO, CFI, and CFF sign patterns to classify company capital-allocation behavior.
+
+![Capital Allocation](docs/screenshots/capital.png)
+
+### Annual Reports
+
+Allows users to browse available annual reports by company and financial year.
+
+![Annual Reports](docs/screenshots/reports.png)
 ## API Endpoints
 
 The FastAPI application provides endpoints including:
