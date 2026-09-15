@@ -1,5 +1,4 @@
-@'
-.venv/
+﻿.venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
@@ -20,4 +19,3 @@ build/
 
 .DS_Store
 Thumbs.db
-'@ | Set-Content -Encoding UTF8 .gitignore
